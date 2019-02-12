@@ -1,0 +1,16 @@
+<div class="card shadow-lg mx-auto my-5" style="border-radius: 1rem !important;">
+  <div class="card-body">
+    <h1 class="card-title text-center mt-3 mb-5">Here is your whack result:</h1>
+
+    <div class="col mx-auto">
+      <h3>Your words (<%= word1 %> and <%= word2 %>) gave an index of <%= index %> with a score of <%= score %>.</h3>
+      <h3><%= comment %></h3>
+      <% if index != 0 %>
+        <h5>Sample tweet containing '<%= word1 %>' and '<%= word2 %>':</h5>
+        <h5><%= tweet.text %> by <%= tweet.user.screen_name %> </h5>
+      <% end %>
+      <br>
+      <a href="/" class="btn btn-primary">Try again</a>
+    </div>
+  </div>
+</div>
